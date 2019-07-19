@@ -253,9 +253,9 @@ class HomePage extends Component {
                           2
                         )}{" "}
                         °C{" - "}
-                        {moment(
-                          this.state.ultimaLeitura.ultimaS1.data
-                        ).fromNow()}
+                        {moment(this.state.ultimaLeitura.ultimaS1.data)
+                          .subtract(4, "hours")
+                          .fromNow()}
                       </font>{" "}
                     </MDBCardText>{" "}
                   </p>
@@ -286,9 +286,9 @@ class HomePage extends Component {
                           2
                         )}{" "}
                         °C{" - "}
-                        {moment(
-                          this.state.ultimaLeitura.ultimaS2.data
-                        ).fromNow()}
+                        {moment(this.state.ultimaLeitura.ultimaS2.data)
+                          .subtract(4, "hours")
+                          .fromNow()}
                       </font>{" "}
                     </MDBCardText>{" "}
                   </p>
@@ -319,9 +319,9 @@ class HomePage extends Component {
                           2
                         )}{" "}
                         °C{" - "}
-                        {moment(
-                          this.state.ultimaLeitura.ultimaS3.data
-                        ).fromNow()}
+                        {moment(this.state.ultimaLeitura.ultimaS3.data)
+                          .subtract(4, "hours")
+                          .fromNow()}
                       </font>{" "}
                     </MDBCardText>{" "}
                   </p>
