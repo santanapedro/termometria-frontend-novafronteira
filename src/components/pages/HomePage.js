@@ -66,7 +66,7 @@ class HomePage extends Component {
   //=========================================================================================================
 
   async componentDidMount() {
-    // this.setState({ loader: true, loaderSetor: true, loaderLeituras: true });
+    this.setState({ loader: true, loaderSetor: true });
     this.setState({ token: localStorage.getItem("@hortech:token") });
     await this.validaToken();
     this.buscaUltimo();
@@ -163,7 +163,7 @@ class HomePage extends Component {
   //=========================================================================================================
 
   subscribeToEvents = () => {
-    const io = socket("http://192.168.15.15:3333");
+    const io = socket("https://novafronteira-backend.herokuapp.com/");
 
     io.on("leitura", data => {
       this.dataBar();
