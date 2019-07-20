@@ -104,6 +104,10 @@ class HomePage extends Component {
           <MDBIcon icon="temperature-high" className="danger-color-dark" />
         )
       });
+    } else {
+      this.setState({
+        colorS1: <MDBIcon icon="temperature-low" className="primary-color" />
+      });
     }
     if (response.data.ultimaS2.temperatura >= tempAlerta) {
       this.setState({
@@ -111,12 +115,20 @@ class HomePage extends Component {
           <MDBIcon icon="temperature-high" className="danger-color-dark" />
         )
       });
+    } else {
+      this.setState({
+        colorS1: <MDBIcon icon="temperature-low" className="primary-color" />
+      });
     }
     if (response.data.ultimaS3.temperatura >= tempAlerta) {
       this.setState({
         colorS3: (
           <MDBIcon icon="temperature-high" className="danger-color-dark" />
         )
+      });
+    } else {
+      this.setState({
+        colorS1: <MDBIcon icon="temperature-low" className="primary-color" />
       });
     }
   }
@@ -236,8 +248,8 @@ class HomePage extends Component {
                 {this.state.colorS1}
                 <div className="data">
                   <p>
-                    SETOR -{" "}
-                    <font size="3">
+                    <font size="4">SETOR - </font>
+                    <font size="6">
                       <strong> 01 </strong>{" "}
                     </font>
                   </p>
@@ -270,8 +282,8 @@ class HomePage extends Component {
                 {this.state.colorS2}
                 <div className="data">
                   <p>
-                    SETOR -{" "}
-                    <font size="3">
+                    <font size="4">SETOR - </font>
+                    <font size="6">
                       <strong> 02 </strong>{" "}
                     </font>
                   </p>
@@ -303,8 +315,8 @@ class HomePage extends Component {
                 {this.state.colorS3}
                 <div className="data">
                   <p>
-                    SETOR -{" "}
-                    <font size="3">
+                    <font size="4">SETOR - </font>
+                    <font size="6">
                       <strong> 03 </strong>{" "}
                     </font>
                   </p>
