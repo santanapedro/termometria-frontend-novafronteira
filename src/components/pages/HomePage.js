@@ -194,6 +194,7 @@ class HomePage extends Component {
     });
 
     io.on("erro", data => {
+      console.log(data);
       this.notificationDOMRef.current.addNotification({
         title: "Erro",
         message: data.texto,
@@ -242,40 +243,6 @@ class HomePage extends Component {
       <React.Fragment>
         <ReactNotification ref={this.notificationDOMRef} />
         <MDBRow className="mb-4">
-          <MDBCol className="mb-r">
-            <MDBCard className="cascading-admin-card">
-              <div className="admin-up">
-                {this.state.colorS1}
-                <div className="data">
-                  <p>
-                    <font size="4">SETOR - </font>
-                    <font size="6">
-                      <strong> 01 </strong>{" "}
-                    </font>
-                  </p>
-
-                  <p align="right">
-                    {" "}
-                    <MDBCardText>
-                      {" "}
-                      <font size="2">
-                        {this.state.ultimaLeitura.ultimaS1.umidade.toFixed(2)} %
-                        /{" "}
-                        {this.state.ultimaLeitura.ultimaS1.temperatura.toFixed(
-                          2
-                        )}{" "}
-                        °C{" - "}
-                        {moment(
-                          this.state.ultimaLeitura.ultimaS1.data
-                        ).fromNow()}
-                      </font>{" "}
-                    </MDBCardText>{" "}
-                  </p>
-                </div>
-              </div>
-            </MDBCard>
-          </MDBCol>
-
           <MDBCol>
             <MDBCard className="cascading-admin-card">
               <div className="admin-up">
@@ -284,7 +251,7 @@ class HomePage extends Component {
                   <p>
                     <font size="4">SETOR - </font>
                     <font size="6">
-                      <strong> 02 </strong>{" "}
+                      <strong> EXTERNO </strong>{" "}
                     </font>
                   </p>
                   <p align="right">
@@ -317,7 +284,7 @@ class HomePage extends Component {
                   <p>
                     <font size="4">SETOR - </font>
                     <font size="6">
-                      <strong> 03 </strong>{" "}
+                      <strong> INTERNO </strong>{" "}
                     </font>
                   </p>
                   <p align="right">
